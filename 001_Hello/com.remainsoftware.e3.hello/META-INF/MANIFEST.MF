@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Hello World Plugin
+Bundle-SymbolicName: com.remainsoftware.e3.hello;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Remain Software
+Automatic-Module-Name: com.remainsoftware.e3.hello
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: org.eclipse.ui;bundle-version="3.119.100",
+ org.eclipse.core.runtime;bundle-version="3.23.0"

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="com.remainsoftware.e3.hello.e3course"
+            name="e3 Course">
+      </category>
+      <view
+            category="com.remainsoftware.e3.hello.e3course"
+            class="com.remainsoftware.e3.hello.HelloWorld"
+            id="com.remainsoftware.e3.hello.HelloWorld"
+            name="Hello again!"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>
