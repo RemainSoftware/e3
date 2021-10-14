@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="com.remainsoftware.e3.swt.base.HelloWorld"
+            id="com.remainsoftware.e3.swt.base.HelloWorld"
+            name="Hello World"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>
