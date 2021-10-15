@@ -47,6 +47,7 @@ public class AButton extends Button {
 	private boolean fIsDamaged;
 	private boolean fCancelled;
 	private boolean fIsDone;
+	private boolean fIsStarted;
 
 	protected boolean isCancelled() {
 		return fCancelled;
@@ -85,9 +86,10 @@ public class AButton extends Button {
 	 * 
 	 * @return this
 	 */
-	public AButton reStart() {
+	public AButton start() {
 		fCancelled = false;
 		fIsDone = false;
+		fIsStarted = true;
 		redraw();
 		return this;
 	}
@@ -135,8 +137,10 @@ public class AButton extends Button {
 		int sleepTime = button.getDelay() / bounds.width;
 		int borderWidth = getBorderSize();
 
-		if (fIsDone) {
-			drawDamagedArea(gc, bounds, borderWidth, bounds.width);
+		if (fIsDone || !fIsStarted) {
+			if (fIsStarted) {
+				drawDamagedArea(gc, bounds, borderWidth, bounds.width);
+			}
 			return;
 		}
 
@@ -168,7 +172,7 @@ public class AButton extends Button {
 	private void drawDamagedArea(GC gc, Rectangle bounds, int borderWidth, int width) {
 		Color background = gc.getBackground();
 		gc.setBackground(gc.getForeground());
-		gc.fillRectangle(borderWidth, borderWidth, width - 1, bounds.height - borderWidth - 1);
+		gc.fillRectangle(borderWidth, borderWidth, width - 2, bounds.height - borderWidth);
 		gc.setBackground(background);
 	}
 
