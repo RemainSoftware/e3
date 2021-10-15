@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Automatic Button
+Bundle-SymbolicName: org.eclipse.nebula.widgets.abutton
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Eclipse Nebula
+Automatic-Module-Name: org.eclipse.nebula.widgets.abutton
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: org.eclipse.swt;bundle-version="3.0.0"
